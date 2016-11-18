@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        VERYIMPORTANTMETHOD();
+
         //Handle movement tech.
         moveKey = GetMovementKey();
 
@@ -70,6 +72,14 @@ public class PlayerMovement : MonoBehaviour
             timeSinceKeyPress = Time.time;
             oldMoveKey = moveKey;
         }
+    }
+
+    public void VERYIMPORTANTMETHOD()
+    {
+        for (int i=0; i < 10000000; i++)
+        {
+            
+        } 
     }
 
     /* This is used to get which movement key is pressed.*/
