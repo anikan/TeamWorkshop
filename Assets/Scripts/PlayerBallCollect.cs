@@ -72,7 +72,11 @@ public class PlayerBallCollect : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         //If we collided with the ball, then this player now owns the ball.
-        if (col.gameObject.name == "Ball")
+        //      if (col.gameObject.name == "Ball")
+
+        Ball ball = col.collider.gameObject.GetComponent<Ball>();
+
+        if (ball != null)
         {
             Debug.Log("Ball received");
             //Make this player now the parent of the ball.
